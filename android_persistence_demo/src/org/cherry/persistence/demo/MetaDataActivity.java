@@ -32,7 +32,7 @@ public class MetaDataActivity extends ActionBarActivity {
 				throw new NullPointerException(" clazz is null");
 			}
 			FragmentManager fm = getSupportFragmentManager();
-			int contentId = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ? android.R.id.content : R.id.action_bar_activity_content;
+			int contentId = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ? android.R.id.content : android.R.id.content;
 			if (fm.findFragmentById(contentId) == null) {
 				@SuppressWarnings("unchecked")
 				Class<? extends Fragment> name = (Class<? extends Fragment>) Class.forName(clazz);
